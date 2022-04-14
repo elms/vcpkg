@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO wolfssl/wolfssl
-    REF v5.2.0-stable
-    SHA512 ace828242dfb560068d3ad79d4f3b9548c57705384c1fa2dc3bd71bdc9dd2c5e39895d0525fae36e63469fad152ebcb3408f12d0b7d5265d871ac816cc813e3c
+    REPO elms/wolfssl
+    REF cmake/out_of_src
+    SHA512 7e4805537b736186c5136a66cd6f9fda436306807e9be08527d2db51245091c5e4be4d1604960133f045bbdcb7cf6da47252acc6d82dee7020b7084c32c6b162
     HEAD_REF master
     )
 
@@ -15,13 +15,3 @@ vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/wolfssl)
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
-
-
-if(EXISTS ${CURRENT_PACKAGES_DIR}/lib/wolfssl.dll)
-    file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/bin)
-    file(RENAME ${CURRENT_PACKAGES_DIR}/lib/wolfssl.dll ${CURRENT_PACKAGES_DIR}/bin/wolfssl.dll)
-endif()
-if(EXISTS ${CURRENT_PACKAGES_DIR}/debug/lib/wolfssl.dll)
-    file(MAKE_DIRECTORY ${CURRENT_PACKAGES_DIR}/debug/bin)
-    file(RENAME ${CURRENT_PACKAGES_DIR}/debug/lib/wolfssl.dll ${CURRENT_PACKAGES_DIR}/debug/bin/wolfssl.dll)
-endif()
