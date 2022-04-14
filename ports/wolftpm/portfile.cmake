@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO elms/wolftpm
     REF vcpkg
-    SHA512 3d04c2934c56da8317f7c2079cc1e11b5421fbc4e70b33cbb913d9a054af1a1b7ef287c828da7e89fed3fc2fbe889fccce8b7e85ce27cfca099806caf2ec29cc
+    SHA512  2d22f2d0d533661deba9c1e02d2df6fd7d99045e985c38f74c5a430cbdd0dab761e79cd135159f6adebe05b361eb0cebfbac3c15af36f0754e2e2966daa92f8b
     HEAD_REF master
     )
 
